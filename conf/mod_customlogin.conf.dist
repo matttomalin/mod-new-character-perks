@@ -30,4 +30,4 @@ CustomLogin.SpecialAbility = 1
 
 # New characters start with Exalted reputation for main city factions? (1: true | 0: false)
 
-CustomLogin.Reputation = 1
+CustomLogin.Reputation = 0

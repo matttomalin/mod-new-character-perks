@@ -90,7 +90,7 @@ public:
             {
                 // Define Equipment
                 uint32 shoulders = 0, chest = 0, trinket = 0, weapon = 0, weapon2 = 0, weapon3 = 0, shoulders2 = 0, chest2 = 0, trinket2 = 0;
-                // const uint32 bag = 23162;		// Foror's Crate of Endless Resist Gear Storage (36 Slot)
+                const uint32 bag = 23162;		// Foror's Crate of Endless Resist Gear Storage (36 Slot)
                 const uint32 ring = 50255;		// Dread Pirate Ring (5% XP Boost)
 
                 // Outfit the character with bags and heirlooms that match their class
@@ -194,90 +194,92 @@ public:
                 case CLASS_DEATH_KNIGHT:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(weapon3, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(weapon3, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 case CLASS_PALADIN:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 case CLASS_WARRIOR:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(weapon3, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(weapon3, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 case CLASS_HUNTER:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(weapon3, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(weapon3, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 case CLASS_ROGUE:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 case CLASS_DRUID:
                     player->AddItem(trinket, 2);
                     player->AddItem(trinket2, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(shoulders2, 1);
-                    //player->AddItem(chest2, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(shoulders2, 1);
+                    player->AddItem(chest2, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 case CLASS_SHAMAN:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(shoulders2, 1);
-                    //player->AddItem(chest2, 1);
-                    //player->AddItem(weapon2, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(shoulders2, 1);
+                    player->AddItem(chest2, 1);
+                    player->AddItem(weapon2, 1);
+                    player->AddItem(bag, 4);
                     break;
 
                 default:
                     player->AddItem(trinket, 2);
                     player->AddItem(ring, 1);
-                    //player->AddItem(shoulders, 1);
-                    //player->AddItem(chest, 1);
-                    //player->AddItem(weapon, 1);
-                    //player->AddItem(bag, 4);
+                    player->AddItem(shoulders, 1);
+                    player->AddItem(chest, 1);
+                    player->AddItem(weapon, 1);
+                    player->AddItem(bag, 4);
                     break;
                 }
+
+                player->AddItem(38050, 1);  // https://www.wowhead.com/wotlk/item=38050/soul-trader-beacon
 
                 // Inform the player they have new items
                 std::ostringstream ss;
@@ -401,18 +403,18 @@ public:
             if (sConfigMgr->GetBoolDefault("CustomLogin.SpecialAbility", true))
             {
                 // Learn Specialized Skills
-                player->learnSpell(1784);	// Stealth
-                player->learnSpell(921);	// Pick Pocket
+                //player->learnSpell(1784);	// Stealth
+                //player->learnSpell(921);	// Pick Pocket
                 player->learnSpell(1804);	// Lockpicking
-                player->learnSpell(11305);	// Sprint (3)
-                player->learnSpell(5384);	// Feign Death
-                // player->learnSpell(475);	// Remove Curse
+                //player->learnSpell(11305);	// Sprint (3)
+                //player->learnSpell(5384);	// Feign Death
+                player->learnSpell(475);	// Remove Curse
 
                 // Add a few teleportation runes
-                player->AddItem(17031, 5);	// Rune of Teleportation
+                //player->AddItem(17031, 5);	// Rune of Teleportation
 
                 // Learn Teleports
-                switch (player->GetTeamId())
+                /*switch (player->GetTeamId())
                 {
 
                 case TEAM_ALLIANCE:
@@ -437,7 +439,7 @@ public:
 
                 default:
                     break;
-                }
+                }*/
 
                 // Inform the player they have new skills
                 std::ostringstream ss;
